@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;700&display=swap');
+:root{
+    --red: #6d2e46;
+    --orange: #a26769;
+    --vanila: #d5b9b2;
+    --body: #ece2d0;
+    --white:#fff;
+    --text: #333;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background: var(--body);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+}
+button{
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    
+}
+button:hover{
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+/*************
+Grid
+**********/
+.row::after{
+    display: block;
+    clear: both;
+    content: "";
+}
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.33%;
+}
+.col-5{
+    width: 41.66%;
+}
+.col-6{
+    width: 50% ;
+}
+.col-7{
+    width: 58.33%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.33%;
+}
+.col-11{
+    width: 91.66%;
+}
+.col-12{
+    width: 100%;
+}
+
+[class*="col-"]{/*svaka klasa koja ima u imenu col- */
+    padding: 30px;
+    float: left;
+}
+
+/***********
+HEADER
+************/
+header{
+    background-image: linear-gradient(rgba(109,46,70,0.7),rgba(236,226,208,0.99)) ,url(img/header.jpg);
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px;
+}
+header i{
+    color:var(--red);
+    font-size: 4rem;
+}
+header h1{
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 700;
+}
+header p{
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 20px;
+}
+
+.four-columns{
+    text-align: center;
+}
+.four-columns h1{
+    text-transform: uppercase;
+   
+}
+.four-columns i{
+    color: var(--red);
+    font-size: 5rem;
+    padding: 20px;
+
+}
+.four-columns p{
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.books{
+    padding: 70px 0;
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.books h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3rem;
+}
+.books p{
+    text-align: center;
+    font-weight: bold;
+}
+.books img{
+width: 100%;
+height: 50vh;
+padding: 30px;
+}
+.books .row:nth-child(3){
+    text-align: center;
+    
+}
+.button-books{
+    background: var(--orange);
+}
+
+.blog h1{
+ text-align: center;
+ padding-top: 30px;
+ font-size: 3rem;
+}
+.blog h5{
+    text-align: center;
+    font-size: 1rem;
+   
+}
+.blog img{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    }
+    .blog p{
+        text-align: justify;
+        padding-bottom: 30px;
+    }
+    .blog button{
+        text-align: center;
+    }
+
+    /*************
+    footer
+    *****************/
+    footer{
+        background: var(--red);
+        color: var(--white);
+    }
+    footer p{
+        text-align: center;
+        font-size: 1.3rem;
+        padding:20px;
+        font-weight: bold;
+    }
+
+
+
+/************
+Responsive
+*************/
+@media(max-width:768px) {
+    [class*="col-"]{
+        width:100%;
+    } 
+    .container{
+        width:95%;
+    }
+    .blog p{
+        font-weight: bold;
+    }
+}
